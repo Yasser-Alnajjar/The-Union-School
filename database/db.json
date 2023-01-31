@@ -95,7 +95,7 @@
       "id": 8
     },
     {
-      "email": "roro@mail.com",
+      "email": "romisaa@mail.com",
       "password": "$2a$10$/tX1M6EqmW66QiSgEjGFd.RTrpIrxGwrYFan6WrW5iyl1zdhSCYRe",
       "stages": "Second",
       "firstname": "romisaa",
@@ -145,6 +145,19 @@
       "language": "php",
       "ifTeacher": true,
       "id": 13
+    },
+    {
+      "email": "mahmoud@mail.com",
+      "password": "$2a$10$tlKsQCvc8qB2PQ6BrOnTWuvTX35bEyp3J8vmNPCPGZP1XoonEwf2y",
+      "description": "I am elgezawy i like my language and i love teach all pepole my language",
+      "firstname": "mahmoud",
+      "lastname": "elgezawy",
+      "phone": "01123828677",
+      "birth": "17-9-1995",
+      "address": "giza",
+      "language": "sass",
+      "ifTeacher": true,
+      "id": 14
     }
   ],
   "contacts": [],

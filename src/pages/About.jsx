@@ -45,7 +45,7 @@ export default function About() {
       <Container>
         <Row>
           <MainTitle name="Governors" />
-          <Col>
+          <Col className="my-5 py-5">
             <ListGroup className="shadow">
               <ListGroup.Item variant={theme.mode}>
                 Setting the overarching strategic direction, policies and
@@ -80,7 +80,7 @@ export default function About() {
             </ListGroup>
           </Col>
           <MainTitle name="WHY CHOOSE THE UNION" />
-          <Col>
+          <Col className="my-5 py-5">
             <ListGroup className="shadow">
               <ListGroup.Item variant={theme.mode}>
                 Al Ittihad Private School–Jumeira is one of the five Al Ittihad
@@ -112,7 +112,7 @@ export default function About() {
             </ListGroup>
           </Col>
           <MainTitle name="School Facilities" />
-          <Col>
+          <Col className="my-5 py-5">
             <ListGroup className="shadow">
               <ListGroup.Item variant={theme.mode}>
                 <p className="fs-4 fw-bold">Buildings</p>

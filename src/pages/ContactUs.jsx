@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Swal from "sweetalert2";
 import { object, string } from "yup";
+import ErrorMessage from "../components/Forms/ErrorMessage";
 import InputFC from "../components/Forms/Input";
 import MainTitle from "../components/Main_title";
 import { rgxPhone } from "../helpers/authHelp";
@@ -106,6 +107,7 @@ export default function ContactUs() {
                       : `border-color-success ${theme.mode}`
                   }
                 />
+                <ErrorMessage errors={errors.firstname} />
               </Col>
               <Col sm="12" lg="6" className="mb-3">
                 <InputFC
@@ -123,6 +125,7 @@ export default function ContactUs() {
                     errors?.lastname ? "text-danger" : "text-black-50"
                   }
                 />
+                <ErrorMessage errors={errors.lastname} />
               </Col>
             </Row>
             <Row>
@@ -139,6 +142,7 @@ export default function ContactUs() {
                       : `border-color-success ${theme.mode}`
                   }
                 />
+                <ErrorMessage errors={errors.email} />
               </Col>
               <Col sm="12" lg="6" className="mb-3">
                 <InputFC
@@ -153,6 +157,7 @@ export default function ContactUs() {
                       : `border-color-success ${theme.mode}`
                   }
                 />
+                <ErrorMessage errors={errors.phone} />
               </Col>
             </Row>
             <Row>
@@ -173,6 +178,7 @@ export default function ContactUs() {
                     }
                   />
                 </FloatingLabel>
+                <ErrorMessage errors={errors.message} />
               </Col>
             </Row>
             <div className="text-center">

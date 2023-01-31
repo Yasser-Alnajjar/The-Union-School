@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import CardMagic from "../components/card-magic/CardMagic";
 import MainTitle from "../components/Main_title";
 import { header } from "../helpers/authHelp";
+import { goToTop } from "../utils/CapitalizeError";
 export default function Classes() {
   const [usersData, setUsersData] = useState([]);
   const { theme } = useSelector((state) => state);
@@ -18,7 +19,6 @@ export default function Classes() {
       })
       .then((res) => setUsersData(res.data));
   }, []);
-
   return (
     <div className={`py-3 ${theme.mode}`}>
       <Container>
@@ -27,7 +27,7 @@ export default function Classes() {
           {usersData.map((item) => {
             return (
               item.ifTeacher && (
-                <Col lg="4" className="my-3 index" key={item.id}>
+                <Col lg="4" className="my-3  index" key={item.id}>
                   <CardMagic styles="fs-5">
                     <Card.Body>
                       <Card.Text className={` text-start p-2 rounded`}>
@@ -38,15 +38,15 @@ export default function Classes() {
                         >
                           Name:{" "}
                           <span
-                            className={` ${
+                            className={`text-capitalize  ${
                               theme.mode === "dark" ? "text-info" : "text-light"
                             }`}
                           >
-                            {item.firstname} - {item.lastname}
+                            {item.firstname} {item.lastname}
                           </span>
                         </p>
                         <p
-                          className={` ${
+                          className={` text-capitalize  ${
                             theme.mode === "dark" ? "text-light" : "text-dark"
                           }`}
                         >
@@ -80,6 +80,7 @@ export default function Classes() {
                           to={`/teachers/${item.id}`}
                           variant={theme.mode === "dark" ? "light" : "dark"}
                           className="ms-auto"
+                          onClick={() => goToTop()}
                         >
                           Details
                         </Button>

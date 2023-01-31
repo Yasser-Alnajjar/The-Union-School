@@ -6,11 +6,13 @@ export default function ListClass({ name, item }) {
     <div className=" d-flex align-items-center">
       <div className="d-flex w-100">
         <div className="w-25">
-          <div className={`my-2 py-2 ${theme.mode}`}>{name}</div>
+          <div className={`my-2 text-capitalize  py-2 ${theme.mode}`}>
+            {name}
+          </div>
         </div>
         <div className="w-75">
           <div
-            className={`${
+            className={`text-capitalize  ${
               theme.mode === "dark" ? "bg-brown" : "bg-silver"
             }  d-block listClases w-100 my-2 rounded  py-2`}
           >

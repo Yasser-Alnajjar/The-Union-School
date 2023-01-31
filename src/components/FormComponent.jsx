@@ -222,7 +222,7 @@ export default function FormComponent() {
                   errors={errors}
                   register={register}
                   label="Password"
-                  type={visible ? "text" : "password"}
+                  type={!visible ? "password" : "text"}
                   count="4"
                   visible={visible}
                   setVisible={setVisible}
@@ -289,7 +289,7 @@ export default function FormComponent() {
                       errors={errors}
                       register={register}
                       label="Language"
-                      type="text"
+                      type="language"
                       count="8"
                       inputStyle={
                         errors?.language

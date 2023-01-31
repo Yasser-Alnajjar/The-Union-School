@@ -1,27 +1,22 @@
+import "./Home.css";
 import React, { useEffect } from "react";
-import Button from "react-bootstrap/Button";
-// import image3 from "../images/blog.jpg";
 import { fetchSchool } from "../redux/slices/schoolSlice";
 import { FaUserGraduate, FaUserTie } from "react-icons/fa";
 import { FcDataBackup } from "react-icons/fc";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import "./Home.css";
 import Mission from "../components/homePage/Mission";
 import CarouselComponent from "../components/carousel";
-import { userData } from "../redux/slices/user/userSlice";
 import MainTitle from "../components/Main_title";
 
 export default function Home() {
   const schoolState = useSelector((state) => state.getSchool);
   const { theme } = useSelector((state) => state);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(userData());
-  }, [dispatch]);
+
   useEffect(() => {
     dispatch(fetchSchool());
-  }, []);
+  }, [dispatch]);
   return (
     <div className={`home ${theme.mode}`}>
       <div className="custom-h">

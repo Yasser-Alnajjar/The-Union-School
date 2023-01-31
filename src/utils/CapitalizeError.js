@@ -7,3 +7,9 @@ export function capitalizeError(error) {
     );
   }
 }
+export function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}

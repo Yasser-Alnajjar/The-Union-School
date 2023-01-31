@@ -175,25 +175,31 @@ export default function EditProfile() {
               <ErrorMessage errors={errors.phone} />
             </Col>
           </Row>
-          <Row className="justify-content-center">
-            <Col className="mb-3" sm="12" lg="6">
-              <FloatingLabel controlId="floatingTextarea10" label="Description">
-                <Form.Control
-                  onChange={(e) => console.log(e.target.value)}
-                  {...register("description")}
-                  as="textarea"
-                  placeholder="Leave a Description here"
-                  style={{ height: 100 }}
-                  className={
-                    errors?.description
-                      ? `border-danger border-2 w-100 ${theme.mode}`
-                      : `border-color-success  w-100 ${theme.mode}`
-                  }
-                />
-              </FloatingLabel>
-              <ErrorMessage errors={errors.description} />
-            </Col>
-          </Row>
+          {user.ifTeacher ||
+            (user.admin && (
+              <Row className="justify-content-center">
+                <Col className="mb-3" sm="12" lg="6">
+                  <FloatingLabel
+                    controlId="floatingTextarea10"
+                    label="Description"
+                  >
+                    <Form.Control
+                      onChange={(e) => console.log(e.target.value)}
+                      {...register("description")}
+                      as="textarea"
+                      placeholder="Leave a Description here"
+                      style={{ height: 100 }}
+                      className={
+                        errors?.description
+                          ? `border-danger border-2 w-100 ${theme.mode}`
+                          : `border-color-success  w-100 ${theme.mode}`
+                      }
+                    />
+                  </FloatingLabel>
+                  <ErrorMessage errors={errors.description} />
+                </Col>
+              </Row>
+            ))}
           <div className="d-flex align-items-center justify-content-center pt-3">
             <Button
               type="submit"

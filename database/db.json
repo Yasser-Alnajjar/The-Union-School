@@ -40,7 +40,8 @@
       "ifStudent": false,
       "lastname": "School",
       "phone": 238412122,
-      "id": 1
+      "id": 1,
+      "birth": "1-1-2013"
     },
     {
       "email": "yasser@mail.com",
@@ -56,51 +57,6 @@
       "language": "HTML",
       "description": "I am Yasser i like my language and i love teach all pepole my language",
       "id": 2
-    },
-    {
-      "email": "osama@gmail.com",
-      "password": "$2a$10$f4IAseav4Yrhewpkxb3SUOzYwery2DuYzr1T8EgAoIXbR5oFMTWzK",
-      "firstname": "Osama",
-      "ifTeacher": true,
-      "ifStudent": false,
-      "stages": [],
-      "lastname": "Elzero",
-      "phone": "01090179792",
-      "language": "Javascript",
-      "birth": "1-10-2001",
-      "address": "cairo",
-      "description": "I am Osama i like my language and i love teach all pepole my language",
-      "id": 3
-    },
-    {
-      "email": "ahmed@gmail.com",
-      "password": "$2a$10$yGwy2pc/WdkAFs6QYfxnoeNnjacWNhr2rdtVqBKjzZVG7HBkQTtrC",
-      "firstname": "Ahmed",
-      "ifTeacher": true,
-      "ifStudent": false,
-      "stages": [],
-      "lastname": "Nasser",
-      "phone": "01121921231",
-      "language": "React js",
-      "birth": "2-6-1995",
-      "address": "cairo",
-      "description": "I am Ahmed  i like my language and i love teach all pepole my language",
-      "id": 4
-    },
-    {
-      "email": "mostafa@gmail.com",
-      "password": "$2a$10$S7Fs3UFISbv3KazQDSAvzOVg/O8YTP4PAFUwClAddsNIYlDllRura",
-      "firstname": "Mostafa",
-      "ifTeacher": true,
-      "ifStudent": false,
-      "stages": [],
-      "lastname": "Mahfouz",
-      "phone": "01121081998",
-      "birth": "1-10-1985",
-      "address": "giza",
-      "language": "PHP",
-      "description": "I am Mostafa  i like my language and i love teach all pepole my language",
-      "id": 5
     },
     {
       "email": "bakar@mail.com",
@@ -139,18 +95,6 @@
       "id": 8
     },
     {
-      "email": "kamel@gmail.com",
-      "password": "$2a$10$UEk/Nqf86xYB0noOKRw76urXNYzComUQ9Xtg/5nGRiY7uT2f9xkBC",
-      "stages": "First",
-      "firstname": "kamel",
-      "lastname": "abdo",
-      "phone": "01121212443",
-      "birth": "1-10-2001",
-      "address": "giza",
-      "ifStudent": true,
-      "id": 9
-    },
-    {
       "email": "roro@mail.com",
       "password": "$2a$10$/tX1M6EqmW66QiSgEjGFd.RTrpIrxGwrYFan6WrW5iyl1zdhSCYRe",
       "stages": "Second",
@@ -161,67 +105,67 @@
       "address": "giza",
       "ifStudent": true,
       "id": 10
-    }
-  ],
-  "contacts": [
+    },
     {
-      "phone": "01231233123",
-      "message": "Complete the form below if you have questions or would like additional information.",
-      "language": "arabic",
-      "email": "bakar@gmai.com",
-      "city": "giza",
-      "province": "giza",
-      "country": "egypt",
-      "lastname": "bakar",
-      "firstname": "mohamed",
-      "id": 2
+      "email": "ahmed@mail.com",
+      "password": "$2a$10$ckhlGfKCWgRqDHN3WmsBAuyKcBdK94jwnmIQxqSxQ2ItbjFopGTfS",
+      "description": "I am ahmed i like my language and i love teach all pepole my language",
+      "firstname": "ahmed",
+      "lastname": "nasser",
+      "phone": "01121081998",
+      "birth": "12-10-1995",
+      "address": "cairo",
+      "text": "react js",
+      "language": "react js",
+      "ifTeacher": true,
+      "id": 11
+    },
+    {
+      "email": "osama@mail.com",
+      "password": "$2a$10$Ysycr0dGzVJmi5EtnUy1Mu268xgpIsZoOjNmFJjEqPF4v1be/e8a6",
+      "description": "I am osama i like my language and i love teach all pepole my language",
+      "firstname": "osama",
+      "lastname": "elzero",
+      "phone": "01121081998",
+      "birth": "10-11-1987",
+      "address": "cairo",
+      "language": "javascript",
+      "ifTeacher": true,
+      "id": 12
+    },
+    {
+      "email": "mostafa@mail.com",
+      "password": "$2a$10$48pSsMcIhdGI9JlXP1SX7elrsSDe6ltmOMnt6Qr1DOac8irefahBW",
+      "description": "I am mostafa i like my language and i love teach all pepole my language",
+      "firstname": "mostafa",
+      "lastname": "mahfouz",
+      "phone": "01027285688",
+      "birth": "12-2-1985",
+      "address": "giza",
+      "language": "php",
+      "ifTeacher": true,
+      "id": 13
     }
   ],
+  "contacts": [],
   "classes": [
     {
-      "time": "10:00",
-      "place": "EraaSoft",
-      "gradeTarget": "Second",
-      "userId": 3,
-      "id": 1,
-      "day": "Tuesday",
-      "lecture": "Javascript"
-    },
-    {
       "lecture": "HTML",
-      "time": "01:00",
-      "place": "Online",
-      "gradeTarget": "Second",
-      "userId": 2,
-      "id": 2,
-      "day": "Sunday"
-    },
-    {
-      "lecture": "HTML",
-      "time": "01:00",
-      "place": "EraaSoft",
-      "gradeTarget": "Frist",
-      "id": 6,
-      "userId": 2,
-      "day": "Sunday"
-    },
-    {
-      "lecture": "HTML",
-      "time": "01:00",
-      "place": "Eraasoft",
-      "gradeTarget": "Second",
-      "userId": 2,
-      "id": 7,
-      "day": "Monday"
-    },
-    {
       "gradeTarget": "Third",
-      "day": "Tuesday",
-      "lecture": "HTML",
-      "place": "Eraasoft",
-      "time": "10:00",
+      "day": "Friday",
       "userId": 2,
-      "id": 9
+      "place": "Eraasoft",
+      "time": "08:00",
+      "id": 1
+    },
+    {
+      "lecture": "HTML",
+      "gradeTarget": "Third",
+      "day": "Friday",
+      "userId": 2,
+      "place": "Eraasoft",
+      "time": "09:00",
+      "id": 2
     },
     {
       "lecture": "HTML",
@@ -230,61 +174,304 @@
       "userId": 2,
       "place": "Eraasoft",
       "time": "10:00",
-      "id": 10
-    },
-    {
-      "place": "Online",
-      "gradeTarget": "Second",
-      "day": "Sunday",
-      "userId": 2,
-      "lecture": "HTML",
-      "time": "02:00",
-      "id": 11
+      "id": 3
     },
     {
       "place": "Eraasoft",
-      "gradeTarget": "Third",
-      "day": "Sunday",
-      "userId": 6,
-      "lecture": "PHP",
-      "time": "01:00",
-      "id": 13
+      "gradeTarget": "Second",
+      "day": "Friday",
+      "userId": 2,
+      "lecture": "HTML",
+      "time": "11:00",
+      "id": 4
     },
     {
-      "place": "Online",
+      "place": "Eraasoft",
       "gradeTarget": "Second",
-      "day": "Sunday",
-      "userId": 6,
-      "lecture": "PHP",
-      "time": "01:00",
-      "id": 14
+      "day": "Friday",
+      "userId": 2,
+      "lecture": "HTML",
+      "time": "12:00",
+      "id": 5
     },
     {
-      "day": "Sunday",
+      "place": "Eraasoft",
       "gradeTarget": "Second",
-      "place": "Online",
-      "userId": 6,
+      "day": "Friday",
+      "userId": 2,
+      "lecture": "HTML",
       "time": "01:00",
+      "id": 6
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "Eraasoft",
+      "time": "02:00",
+      "lecture": "HTML",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "Eraasoft",
+      "time": "03:00",
+      "lecture": "HTML",
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "Eraasoft",
+      "time": "04:00",
+      "lecture": "HTML",
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "08:00",
+      "userId": 12,
       "lecture": "Javascript",
-      "id": 15
+      "id": 21
     },
     {
-      "day": "Saturday",
+      "day": "Friday",
       "gradeTarget": "Frist",
-      "place": "Eraasoft",
+      "place": "errasoft",
+      "time": "09:00",
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 22
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "10:00",
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 23
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "11:00",
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 24
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "12:00",
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 25
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
       "time": "01:00",
-      "lecture": "HTML",
-      "userId": 2,
-      "id": 16
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 26
     },
     {
-      "day": "Sunday",
-      "gradeTarget": "Frist",
-      "place": "online",
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
       "time": "02:00",
-      "lecture": "HTML",
-      "userId": 2,
-      "id": 17
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 27
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "03:00",
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 28
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "04:00",
+      "userId": 12,
+      "lecture": "Javascript",
+      "id": 29
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "08:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 30
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "09:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 31
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "10:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 32
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "11:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 33
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "12:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 34
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "01:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 35
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "02:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 36
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "03:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 37
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "04:00",
+      "lecture": "react js",
+      "userId": 11,
+      "id": 38
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "08:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 30
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "9:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 31
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "10:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 32
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "11:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 33
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "12:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 34
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "01:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 35
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "02:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 36
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "03:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 37
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "04:00",
+      "lecture": "php",
+      "userId": 13,
+      "id": 38
     }
   ],
   "members": [

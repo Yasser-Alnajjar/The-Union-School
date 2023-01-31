@@ -1,13 +1,17 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { useState } from "react";
 import { Button, ButtonGroup, Table } from "react-bootstrap";
+import { FcCheckmark } from "react-icons/fc";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { API_URL } from "../../api/Api_index";
 import MainTitle from "../../components/Main_title";
 import { fetchContact } from "../../redux/slices/schoolSlice";
+import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
 
 export default function ContactDetails() {
+  const [done, setDone] = useState(false);
   const dispatch = useDispatch();
   const { contacts } = useSelector((state) => state.getSchool);
   const { theme } = useSelector((state) => state);
@@ -33,6 +37,16 @@ export default function ContactDetails() {
       }
     });
   }
+
+  function doneMessage(id) {
+    axios.patch(`${API_URL}/contacts/${id}`, {
+      done: true,
+    });
+    setDone(true);
+    setTimeout(() => {
+      dispatch(fetchContact());
+    }, 100);
+  }
   return (
     <div className={`w-100 ${theme.mode}`}>
       <MainTitle name="Visitor Messages" />
@@ -50,10 +64,6 @@ export default function ContactDetails() {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Country</th>
-            <th>Province</th>
-            <th>City</th>
-            <th>Language</th>
             <th>Message</th>
             <th>Actions</th>
           </tr>
@@ -67,18 +77,27 @@ export default function ContactDetails() {
                 </td>
                 <td>{item.email}</td>
                 <td>{item.phone}</td>
-                <td className="text-capitalize">{item.country}</td>
-                <td className="text-capitalize">{item.province}</td>
-                <td className="text-capitalize">{item.city}</td>
-                <td className="text-capitalize">{item.language}</td>
                 <td>{item.message}</td>
                 <td>
-                  <Button
-                    onClick={() => deleteMessage(item.id)}
-                    variant="outline-danger"
-                  >
-                    Delete
-                  </Button>
+                  <ButtonGroup>
+                    <Button
+                      onClick={() => doneMessage(item.id)}
+                      variant="outline-success"
+                      className="text-light"
+                    >
+                      {item.done ? (
+                        <FcCheckmark />
+                      ) : (
+                        <MdOutlineRadioButtonUnchecked />
+                      )}
+                    </Button>
+                    <Button
+                      onClick={() => deleteMessage(item.id)}
+                      variant="outline-danger"
+                    >
+                      Delete
+                    </Button>
+                  </ButtonGroup>
                 </td>
               </tr>
             );

@@ -33,6 +33,14 @@ export default function Profile() {
         </Row>
         <Row className="justify-content-center">
           <ColProfile
+            rece={userdata.birth}
+            icon="🎂"
+            name={userdata.admin ? "Creation Time" : "Birthday"}
+            theme={theme}
+          />
+        </Row>
+        <Row className="justify-content-center">
+          <ColProfile
             rece={userdata.email}
             icon="📬"
             name="email"

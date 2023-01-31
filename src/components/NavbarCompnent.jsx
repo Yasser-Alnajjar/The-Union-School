@@ -94,7 +94,7 @@ export default function NavbarCompnent() {
             {user && (
               <NavDropdown
                 menuVariant={theme.mode}
-                className={`navbar-nav basic-nav-dropdown  ${theme.mode}`}
+                className={`navbar-nav text-capitalize  basic-nav-dropdown  ${theme.mode}`}
                 title={user.firstname}
                 id="basic-nav-dropdown"
               >

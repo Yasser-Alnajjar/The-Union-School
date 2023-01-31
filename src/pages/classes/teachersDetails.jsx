@@ -1,10 +1,9 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import MainTitle from "../../components/Main_title";
-import { header, user } from "../../helpers/authHelp";
+import { user } from "../../helpers/authHelp";
 import { allClassData } from "../../redux/slices/dashboardSlice";
 import ListClass from "./List-Class";
 
@@ -16,7 +15,6 @@ export default function ClassesDetails() {
   useEffect(() => {
     dispatch(allClassData());
   }, [dispatch]);
-
   return (
     <>
       <div className={`py-5 ${theme.mode}`}>
@@ -43,7 +41,7 @@ export default function ClassesDetails() {
                   sm="12"
                   md="6"
                   lg="3"
-                  className={`hover_card_class rounded shadow ${theme.mode}`}
+                  className={`rounded shadow ${theme.mode}`}
                   key={item.id}
                 >
                   <ListClass item={item.lecture} name="Lecture" />
@@ -52,7 +50,24 @@ export default function ClassesDetails() {
                   <ListClass item={item.time} name="Time" />
                   <ListClass item={item.gradeTarget} name="Grade" />
                 </Col>
-              ) : null;
+              ) : (
+                +id === item.userId &&
+                user.ifTeacher && (
+                  <Col
+                    sm="12"
+                    md="6"
+                    lg="3"
+                    className={`rounded shadow ${theme.mode}`}
+                    key={item.id}
+                  >
+                    <ListClass item={item.lecture} name="Lecture" />
+                    <ListClass item={item.place} name="Place" />
+                    <ListClass item={item.day} name="Day" />
+                    <ListClass item={item.time} name="Time" />
+                    <ListClass item={item.gradeTarget} name="Grade" />
+                  </Col>
+                )
+              );
             })}
           </Row>
         </Container>

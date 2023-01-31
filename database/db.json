@@ -485,6 +485,87 @@
       "lecture": "php",
       "userId": 13,
       "id": 38
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "08:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 39
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "9:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 40
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Frist",
+      "place": "errasoft",
+      "time": "10:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 41
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "11:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 42
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "12:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 43
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Second",
+      "place": "errasoft",
+      "time": "01:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 44
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "02:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 45
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "03:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 46
+    },
+    {
+      "day": "Friday",
+      "gradeTarget": "Third",
+      "place": "errasoft",
+      "time": "04:00",
+      "lecture": "sass",
+      "userId": 14,
+      "id": 47
     }
   ],
   "members": [

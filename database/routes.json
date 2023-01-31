@@ -1,0 +1,8 @@
+{
+  "/users": "/664/users",
+  "/users/:id": "/664/users/:id",
+  "/classes": "/664/classes",
+  "/classes/:id": "/664/classes/:id",
+  "/schedule": "/664/schedule",
+  "/schedule/:id": "/664/schedule/:id"
+}

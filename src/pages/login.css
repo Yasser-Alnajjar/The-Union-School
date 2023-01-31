@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main.login {
+  justify-content: center;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 616.5px;
+}
+
+.content {
+  padding: 20px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.content {
+  position: relative;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.content::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  position: absolute;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+  z-index: -1;
+}
+.content:hover::before {
+  background-image: linear-gradient(
+    var(--rotate),
+    #95afc0,
+    #4834d4,
+    #c7ecee 43%,
+    #130f40
+  );
+}
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+@media (min-width: 767px) {
+  .content {
+    min-width: auto;
+  }
+}
+
+.title {
+  margin: 20px 0 10px 0;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "tahoma", "Poppins", sans-serif;
+  background-image: var(--linear-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-form {
+  width: 85%;
+  margin-bottom: 15 px;
+}
+
+.username-input,
+.password-input {
+  width: 100%;
+  border-bottom: 1px solid #777676;
+}
+
+.login-btn {
+  border: none;
+  padding: 7px 20px;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-image: linear-gradient(
+    43deg,
+    rgb(248, 140, 176) 0%,
+    rgb(169, 119, 223) 100%
+  );
+  color: white;
+  font-weight: 600;
+}
+.login-btn:hover {
+  background-image: linear-gradient(
+    43deg,
+    rgb(169, 119, 223) 0%,
+    rgb(248, 140, 176) 100%
+  );
+}
+.login-btn:active,
+.register-btn:active {
+  opacity: 0.5;
+}
+.register-btn {
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-image: linear-gradient(43deg, rgb(28, 93, 191) 0%, #0a939d 100%);
+  color: white;
+  font-weight: 600;
+}
+.register-btn:hover {
+  background-image: linear-gradient(183deg, #0a939d 0%, rgb(28, 93, 191) 100%);
+}
+.alternative-signup {
+  width: 70%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.alternative-signup > p {
+  width: 90%;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 300;
+}

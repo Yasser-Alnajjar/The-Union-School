@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "serve",
+      "path": "./",
+      "problemMatcher": [],
+      "label": "npm: serve - server",
+      "detail": "json-server-auth ../database/db.json -w --port 9000",
+      "group": "build",
+      "runOptions": { "runOn": "folderOpen" }
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "path": "./",
+      "problemMatcher": [],
+      "label": "npm  start",
+      "detail": "react-scripts start",
+      "group": "build",
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}

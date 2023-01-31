@@ -1,0 +1,22 @@
+.head {
+  height: 90vh;
+}
+
+.card-head {
+  position: relative;
+}
+.card-head::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 55px;
+  background-color: #00ffb9;
+}
+@media (max-width: 567px) {
+  .card-head::before {
+    height: 40px;
+  }
+}

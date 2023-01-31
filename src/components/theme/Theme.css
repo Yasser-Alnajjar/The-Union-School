@@ -1,0 +1,15 @@
+.cutsomTable {
+  background-color: var(--dark-color-2);
+  color: #f1f5f9;
+}
+
+.light {
+  color: #212529 !important;
+  background-color: #f1f5f9 !important;
+  transition: 0.3s ease-in-out;
+}
+.dark {
+  background-color: #212529 !important;
+  color: #f1f5f9 !important;
+  transition: 0.3s ease-in-out;
+}

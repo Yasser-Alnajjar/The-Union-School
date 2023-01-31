@@ -1,0 +1,45 @@
+.blog {
+  /* position: absolute; */
+  color: white;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  background-color: rgba(255, 255, 255, 0.212);
+  border-radius: 20px;
+}
+
+.custom-h {
+  position: relative;
+  height: 640px;
+  clip-path: polygon(50% at 50% 50%);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card_ainmation {
+  transition: 0.5s ease-in-out;
+}
+
+.card-body div {
+  color: black;
+}
+.card-body p {
+  color: #717171;
+}
+.card_ainmation:hover {
+  background-color: #123456 !important;
+  transform: translateY(-10px);
+}
+.card_ainmation:hover .card-body p,
+.card_ainmation:hover .card-body div {
+  color: white !important;
+}
+.custom {
+  background-color: var(--dark-color-2);
+}

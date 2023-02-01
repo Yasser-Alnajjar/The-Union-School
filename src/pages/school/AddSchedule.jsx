@@ -1,6 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import {
   Button,
   Form,
@@ -41,7 +40,6 @@ export default function AddSchedule() {
 
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    console.log(data);
     Swal.fire({
       title: "Are you sure?",
       text: "if you accepted you will navigate to dashboard",
@@ -53,8 +51,9 @@ export default function AddSchedule() {
       background: theme.mode === "dark" ? "#212529" : "#f1f5f9",
       color: theme.mode === "dark" ? "#f1f5f9" : "#212529",
     }).then((result) => {
-      addSchedule(data);
       if (result.isConfirmed) {
+        console.log(data);
+        dispatch(addSchedule(data));
         navigate("/admin/schedule");
       }
     });

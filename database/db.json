@@ -100,7 +100,7 @@
       "stages": "Second",
       "firstname": "romisaa",
       "lastname": "abdo",
-      "phone": "01121291233",
+      "phone": "01121291244",
       "birth": "12-11-2003",
       "address": "giza",
       "ifStudent": true,
@@ -160,7 +160,16 @@
       "id": 14
     }
   ],
-  "contacts": [],
+  "contacts": [
+    {
+      "phone": "01121081998",
+      "message": "i have  a question what can i do in your school",
+      "email": "yasser@mail.com",
+      "lastname": "abdo",
+      "firstname": "yasser",
+      "id": 1
+    }
+  ],
   "classes": [
     {
       "lecture": "HTML",

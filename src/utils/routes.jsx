@@ -52,6 +52,15 @@ export const routes = [
       {
         path: "profile",
         element: <Profile />,
+        loader: async () => {
+          const res = await axios.get(`${API_URL}/users/${user.id}`, {
+            headers: {
+              Authorization: header,
+            },
+          });
+          const data = res.data;
+          return data;
+        },
       },
       {
         path: "/profile/edit",

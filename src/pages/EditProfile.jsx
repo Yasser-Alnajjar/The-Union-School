@@ -12,7 +12,7 @@ import {
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useLoaderData, useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { object, string } from "yup";
 import { API_URL } from "../api/Api_index";
 import { header, rgxPhone, user } from "../helpers/authHelp";
@@ -73,7 +73,9 @@ export default function EditProfile() {
       color: theme.mode === "dark" ? "#f1f5f9" : "#212529",
     }).then((result) => {
       if (result.isConfirmed) {
-        navigate("/profile");
+        setTimeout(() => {
+          navigate("/profile");
+        }, 1000);
         axios.patch(`${API_URL}/users/${user.id}`, data, {
           headers: {
             Authorization: header,

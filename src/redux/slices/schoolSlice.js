@@ -30,10 +30,9 @@ export const fetchSchedule = createAsyncThunk(
 
 export const addSchedule = createAsyncThunk(
   "schoolSlice/addSchedule",
-  async (payload) => {
-    console.log("payload", payload);
-    axios.post(`${API_URL}/schedule`, payload, {
-      headers: { "Content-Type": "applcation/json", Authorization: header },
+  async (data) => {
+    axios.post(`${API_URL}/schedule`, data, {
+      headers: { "Content-Type": "application/json", Authorization: header },
     });
   }
 );

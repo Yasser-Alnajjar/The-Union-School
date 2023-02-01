@@ -21,8 +21,6 @@ import { Link } from "react-router-dom";
 import { user } from "../helpers/authHelp";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/slices/user/userSlice";
-import Theme from "./theme/Theme";
-import { Button } from "react-bootstrap";
 import { setDarkTheme, setDefaultTheme } from "../redux/slices/theme-slice";
 export default function SidebarAdmin() {
   const [expanded, __] = useState(false);

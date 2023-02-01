@@ -22,7 +22,7 @@ export default function SchedulePage() {
     <div className={`py-3 ${theme.mode}`}>
       <MainTitle name="Schedules" styles="fs-2 my-3" />
       <Container>
-        <p className="py-2 fs-4">{currentDay}</p>
+        <p className="py-2 fs-4 text-capitalize">{currentDay}</p>
         <Row>
           {user.ifStudent && (
             <Col className="index">
@@ -47,10 +47,14 @@ export default function SchedulePage() {
                     item.day === currentDay.toLocaleLowerCase() &&
                     item.gradeTarget === user.stages ? (
                       <tr key={item.id}>
-                        <td>{item.teacherName.slice(0, 20)}</td>
-                        <td>{item.language}</td>
-                        <td>{item.time === "00:00" ? "12:00" : item.time}</td>
-                        <td>{item.gradeTarget}</td>
+                        <td className="text-capitalize">
+                          {item.teacherName.slice(0, 20)}
+                        </td>
+                        <td className="text-capitalize">{item.language}</td>
+                        <td className="text-capitalize">
+                          {item.time === "00:00" ? "12:00" : item.time}
+                        </td>
+                        <td className="text-capitalize">{item.gradeTarget}</td>
                       </tr>
                     ) : null
                   )}

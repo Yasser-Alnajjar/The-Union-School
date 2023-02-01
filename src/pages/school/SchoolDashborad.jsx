@@ -99,12 +99,14 @@ export default function SchoolDashborad() {
                     )
                   );
                 })}
-                <td>{item.lecture}</td>
-                <td>{item.place}</td>
-                <td>{item.day}</td>
-                <td>{item.time === "00:00" ? "12:00 " : item.time}</td>
-                <td>{item.gradeTarget}</td>
-                <td style={{ width: 120 }}>
+                <td className="text-capitalize">{item.lecture}</td>
+                <td className="text-capitalize">{item.place}</td>
+                <td className="text-capitalize">{item.day}</td>
+                <td className="text-capitalize">
+                  {item.time === "00:00" ? "12:00 " : item.time}
+                </td>
+                <td className="text-capitalize">{item.gradeTarget}</td>
+                <td className="text-capitalize" style={{ width: 120 }}>
                   <ButtonGroup>
                     <Button
                       as={Link}

@@ -27,17 +27,21 @@ export default function TableComponent({ grade, schedule, theme, currentDay }) {
               item.gradeTarget === grade &&
               item.day === currentDay.toLocaleLowerCase() ? (
                 <tr key={item.id}>
-                  <td>{item.teacherName}..</td>
-                  <td>{item.language}</td>
-                  <td>{item.time === "00:00" ? "12:00" : item.time}</td>
-                  <td>{item.gradeTarget}</td>
+                  <td className="text-capitalize">{item.teacherName}..</td>
+                  <td className="text-capitalize">{item.language}</td>
+                  <td className="text-capitalize">
+                    {item.time === "00:00" ? "12:00" : item.time}
+                  </td>
+                  <td className="text-capitalize">{item.gradeTarget}</td>
                 </tr>
               ) : user.admin && item.day === currentDay.toLocaleLowerCase() ? (
                 <tr key={item.id}>
-                  <td>{item.teacherName}</td>
-                  <td>{item.language}</td>
-                  <td>{item.time === "00:00" ? "12:00" : item.time}</td>
-                  <td>{item.gradeTarget}</td>
+                  <td className="text-capitalize">{item.teacherName}</td>
+                  <td className="text-capitalize">{item.language}</td>
+                  <td className="text-capitalize">
+                    {item.time === "00:00" ? "12:00" : item.time}
+                  </td>
+                  <td className="text-capitalize">{item.gradeTarget}</td>
                 </tr>
               ) : null
             )}
@@ -66,10 +70,12 @@ export default function TableComponent({ grade, schedule, theme, currentDay }) {
               item.gradeTarget === grade &&
               item.day === currentDay.toLocaleLowerCase() ? (
                 <tr key={item.id}>
-                  <td>{item.teacherName}</td>
-                  <td>{item.language}</td>
-                  <td>{item.time === "00:00" ? "12:00" : item.time}</td>
-                  <td>{item.gradeTarget}</td>
+                  <td className="text-capitalize">{item.teacherName}</td>
+                  <td className="text-capitalize">{item.language}</td>
+                  <td className="text-capitalize">
+                    {item.time === "00:00" ? "12:00" : item.time}
+                  </td>
+                  <td className="text-capitalize">{item.gradeTarget}</td>
                 </tr>
               ) : null
             )}

@@ -17,7 +17,7 @@ import {
   FaSun,
 } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { user } from "../helpers/authHelp";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/slices/user/userSlice";
@@ -27,7 +27,7 @@ export default function SidebarAdmin() {
   const [activeKey, setActiveKey] = useState("1");
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state);
-
+  const navigate = useNavigate();
   return (
     <div style={{ width: 56 }}>
       <Sidenav
@@ -288,7 +288,10 @@ export default function SidebarAdmin() {
                   }}
                 />
               }
-              onClick={() => dispatch(logout())}
+              onClick={() => {
+                dispatch(logout());
+                navigate("/login");
+              }}
             >
               LogOut
             </Nav.Item>

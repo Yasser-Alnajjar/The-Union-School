@@ -88,7 +88,10 @@ export default function EditSchedule() {
     return data;
   }
   useEffect(() => {
-    fetchSingleSchedule(editId).then((res) => setSingleSchedule(res));
+    fetchSingleSchedule(editId).then((res) => {
+      console.log(res);
+      setSingleSchedule(res);
+    });
   }, [editId]);
   useEffect(() => {
     setTimeout(() => {
@@ -161,7 +164,9 @@ export default function EditSchedule() {
                     return (
                       user.ifTeacher && (
                         <Fragment key={user.id}>
-                          <option>{user.firstname}</option>
+                          <option value={singleSchedule.teacherName}>
+                            {user.firstname}
+                          </option>
                         </Fragment>
                       )
                     );

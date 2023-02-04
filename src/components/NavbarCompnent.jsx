@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FaSignOutAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { user } from "../helpers/authHelp";
 import { logout } from "../redux/slices/user/userSlice";
 import NavLink from "./helpers-components/Nav-link";
@@ -13,7 +13,7 @@ import Theme from "./theme/Theme";
 export default function NavbarCompnent() {
   const { theme } = useSelector((state) => state);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   return (
     <div style={{ height: "70px" }}>
       <Navbar
@@ -101,7 +101,12 @@ export default function NavbarCompnent() {
                 <NavDropdown.Item as={Link} to="profile">
                   Profile
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => dispatch(logout())}>
+                <NavDropdown.Item
+                  onClick={() => {
+                    dispatch(logout());
+                    navigate("/login");
+                  }}
+                >
                   Logout <FaSignOutAlt style={{ marginLeft: 10 }} />
                 </NavDropdown.Item>
               </NavDropdown>

@@ -18,9 +18,6 @@ export const registerAction = createAsyncThunk(
       .then((data) => {
         if (data.accessToken) {
           toast.success("success");
-          setTimeout(() => {
-            window.location.href = "/login";
-          }, 1000);
         } else toast.warn(data);
       });
   }

@@ -69,9 +69,9 @@ export default function FormComponent() {
       address: string()
         .trim()
         .required("filed is required plase set your governorate"),
-      firstname: string().trim().required().min(4).max(20),
-      lastname: string().trim().required().min(4).max(20),
-      password: string().trim().required().min(8).max(20),
+      firstname: string().trim().required().max(20),
+      lastname: string().trim().required().max(20),
+      password: string().trim().required().max(20),
       email: string().trim().email().required(),
       phone: string()
         .trim()

@@ -33,8 +33,8 @@ export default function FormComponent() {
   let schema;
   if (currentUser === "Teacher") {
     schema = object({
-      firstname: string().trim().required().min(4).max(20),
-      lastname: string().trim().required().min(4).max(20),
+      firstname: string().trim().required().max(20),
+      lastname: string().trim().required().max(20),
       password: string().trim().required().min(8).max(20),
       email: string().trim().email().required(),
       language: string().trim().required(),

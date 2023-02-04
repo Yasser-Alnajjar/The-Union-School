@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { header } from "../../helpers/authHelp";
-const API_URL = "http://localhost:9000";
-
+import { API_URL } from "../../api/Api_index";
 export const fetchSchool = createAsyncThunk(
   "schoolSlice/fetchSchool",
   async () => {

@@ -23,7 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/slices/user/userSlice";
 import { setDarkTheme, setDefaultTheme } from "../redux/slices/theme-slice";
 export default function SidebarAdmin() {
-  const [expanded, __] = useState(false);
+  const [expanded] = useState(false);
   const [activeKey, setActiveKey] = useState("1");
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state);

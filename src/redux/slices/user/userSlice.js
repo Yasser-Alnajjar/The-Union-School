@@ -25,6 +25,10 @@ export const registerAction = createAsyncThunk(
       });
   }
 );
+export const getMembers = () => {
+  return fetch(`${API_URL}/members`).then((res) => res.json());
+};
+
 export const userData = createAsyncThunk("user-slice/userData", async (id) => {
   const res = await axios.get(`${API_URL}/users/${id}`, {
     headers: {

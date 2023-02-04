@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import "./About.css";
 import MainTitle from "../components/Main_title";
 

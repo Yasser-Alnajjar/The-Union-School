@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { useEffect } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +15,7 @@ export default function SchedulePage() {
   let currentDay = new Date().toLocaleString("en-us", { weekday: "long" });
   useEffect(() => {
     dispatch(fetchSchedule());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={`py-3 ${theme.mode}`}>

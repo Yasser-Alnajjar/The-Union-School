@@ -1,6 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { API_URL } from "../../api/Api_index";
 import { header } from "../../helpers/authHelp";

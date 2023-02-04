@@ -30,7 +30,6 @@ export default function AddSchedule() {
   });
   const {
     register,
-
     handleSubmit,
     formState: { errors },
   } = useForm({

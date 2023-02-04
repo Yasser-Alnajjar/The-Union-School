@@ -9,12 +9,11 @@ import {
   Form,
   Row,
 } from "react-bootstrap";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
 import Swal from "sweetalert2";
-import { number, object, string } from "yup";
+import { object, string } from "yup";
 import { API_URL } from "../../api/Api_index";
 import ErrorMessage from "../../components/Forms/ErrorMessage";
 import InputFC from "../../components/Forms/Input";
@@ -24,8 +23,6 @@ import { capitalizeError } from "../../utils/CapitalizeError";
 
 export default function EditClassSchool() {
   const { id: idParams } = useParams();
-  const [selectValue, setSelectValue] = useState("");
-  const [day, setDay] = useState("");
   const [editClassData, setEditClassData] = useState({});
   const { theme } = useSelector((state) => state);
 
@@ -79,7 +76,7 @@ export default function EditClassSchool() {
   }
 
   async function getSingleClass(id) {
-    const res = await axios.get(`http://localhost:9000/classes/${id}`, {
+    const res = await axios.get(`${API_URL}/classes/${id}`, {
       headers: { Authorization: header },
     });
     const data = await res.data;

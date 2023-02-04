@@ -11,5 +11,5 @@ export const store = configureStore({
     dashboard: dashboardSlice,
     theme: themeSlice,
   },
-  devTools: true,
+  devTools: false,
 });

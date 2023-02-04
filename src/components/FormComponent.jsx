@@ -9,14 +9,13 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
-import { getUsers } from "../api/Api_index";
 import { fetchSchool } from "../redux/slices/schoolSlice";
 import InputFC from "./Forms/Input";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { object, string } from "yup";
 import ErrorMessage from "./Forms/ErrorMessage";
-import { registerAction } from "../redux/slices/user/userSlice";
+import { getMembers, registerAction } from "../redux/slices/user/userSlice";
 import { rgxPhone } from "../helpers/authHelp";
 import { capitalizeError } from "../utils/CapitalizeError";
 
@@ -115,7 +114,7 @@ export default function FormComponent() {
     dispatch(registerAction(data));
   };
   useEffect(() => {
-    getUsers().then((data) => {
+    getMembers().then((data) => {
       setMembers(data);
     });
   }, []);

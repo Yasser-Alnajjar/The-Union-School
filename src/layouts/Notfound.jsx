@@ -1,5 +1,4 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
-// import notFoundImg from "../images/not found.png";
 import { FaArrowLeft } from "react-icons/fa";
 import "./Errorpage.css";
 import { Link } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Col,
@@ -11,7 +11,6 @@ import {
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import { object, string } from "yup";
 import ErrorMessage from "../../components/Forms/ErrorMessage";
@@ -20,7 +19,6 @@ import MainTitle from "../../components/Main_title";
 import { user } from "../../helpers/authHelp";
 import { postData } from "../../redux/slices/dashboardSlice";
 import { capitalizeError } from "../../utils/CapitalizeError";
-
 export default function AddClass() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

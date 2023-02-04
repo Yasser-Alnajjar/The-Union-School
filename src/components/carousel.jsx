@@ -6,7 +6,7 @@ import ReactStars from "react-stars";
 import { useState } from "react";
 import MainTitle from "./Main_title";
 export default function CarouselComponent() {
-  const [slider, setSlider] = useState([
+  const [slider] = useState([
     {
       id: 1,
       star: 4,

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { API_URL } from "../api/Api_index";
 import CardMagic from "../components/card-magic/CardMagic";
 import MainTitle from "../components/Main_title";
 import { header } from "../helpers/authHelp";
@@ -12,7 +13,7 @@ export default function Classes() {
   const { theme } = useSelector((state) => state);
   useEffect(() => {
     axios
-      .get("http://localhost:9000/users", {
+      .get(`${API_URL}/users`, {
         headers: {
           Authorization: header,
         },

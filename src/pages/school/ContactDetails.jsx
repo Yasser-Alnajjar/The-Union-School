@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { useState } from "react";
 import { Button, ButtonGroup, Table } from "react-bootstrap";
 import { FcCheckmark } from "react-icons/fc";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,7 +10,6 @@ import { fetchContact } from "../../redux/slices/schoolSlice";
 import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
 
 export default function ContactDetails() {
-  const [done, setDone] = useState(false);
   const dispatch = useDispatch();
   const { contacts } = useSelector((state) => state.getSchool);
   const { theme } = useSelector((state) => state);
@@ -42,7 +40,6 @@ export default function ContactDetails() {
     axios.patch(`${API_URL}/contacts/${id}`, {
       done: true,
     });
-    setDone(true);
     setTimeout(() => {
       dispatch(fetchContact());
     }, 100);

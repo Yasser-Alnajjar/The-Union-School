@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Alert, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import MainTitle from "../../components/Main_title";
@@ -15,14 +15,21 @@ export default function ClassesDetails() {
   useEffect(() => {
     dispatch(allClassData());
   }, [dispatch]);
+  let currentUser = dashboard.filter((item) => {
+    return +id === item.userId && user.stages === item.gradeTarget
+      ? item
+      : +id === item.userId && user.ifStudent === false
+      ? item
+      : +id === item.userId && user.ifTeacher && item;
+  });
   return (
     <>
       <div className={`py-5 ${theme.mode}`}>
         <MainTitle name="Class Details" />
         <Container>
           <Row className="gap-2 justify-content-center">
-            {dashboard.map((item) => {
-              return +id === item.userId && user.stages === item.gradeTarget ? (
+            {currentUser.map((item) => {
+              return (
                 <Col
                   sm="12"
                   md="6"
@@ -36,39 +43,13 @@ export default function ClassesDetails() {
                   <ListClass item={item.place} name="Place" />
                   <ListClass item={item.gradeTarget} name="Grade" />
                 </Col>
-              ) : +id === item.userId && user.ifStudent === false ? (
-                <Col
-                  sm="12"
-                  md="6"
-                  lg="3"
-                  className={`rounded shadow ${theme.mode}`}
-                  key={item.id}
-                >
-                  <ListClass item={item.lecture} name="Lecture" />
-                  <ListClass item={item.place} name="Place" />
-                  <ListClass item={item.day} name="Day" />
-                  <ListClass item={item.time} name="Time" />
-                  <ListClass item={item.gradeTarget} name="Grade" />
-                </Col>
-              ) : (
-                +id === item.userId &&
-                user.ifTeacher && (
-                  <Col
-                    sm="12"
-                    md="6"
-                    lg="3"
-                    className={`rounded shadow ${theme.mode}`}
-                    key={item.id}
-                  >
-                    <ListClass item={item.lecture} name="Lecture" />
-                    <ListClass item={item.place} name="Place" />
-                    <ListClass item={item.day} name="Day" />
-                    <ListClass item={item.time} name="Time" />
-                    <ListClass item={item.gradeTarget} name="Grade" />
-                  </Col>
-                )
               );
             })}
+            {currentUser.length === 0 && (
+              <Alert variant="dark" className="text-center fs-2 ">
+                You don't have any classes with this teacher
+              </Alert>
+            )}
           </Row>
         </Container>
       </div>

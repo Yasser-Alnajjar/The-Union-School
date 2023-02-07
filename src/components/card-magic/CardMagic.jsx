@@ -5,7 +5,7 @@ export default function CardMagic({ children, styles }) {
   const { theme } = useSelector((state) => state);
   return (
     <div
-      className={`shadow card-magic ${styles} ${
+      className={`shadow  w-100 h-100 card-magic ${styles} ${
         theme.mode === "dark" ? "bg-dark" : "card-magic-bg"
       }`}
     >

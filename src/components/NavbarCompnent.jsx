@@ -9,7 +9,6 @@ import { user } from "../helpers/authHelp";
 import { logout } from "../redux/slices/user/userSlice";
 import NavLink from "./helpers-components/Nav-link";
 import Theme from "./theme/Theme";
-
 export default function NavbarCompnent() {
   const { theme } = useSelector((state) => state);
   const dispatch = useDispatch();

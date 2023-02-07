@@ -18,8 +18,10 @@ import ErrorMessage from "./Forms/ErrorMessage";
 import { getMembers, registerAction } from "../redux/slices/user/userSlice";
 import { rgxPhone } from "../helpers/authHelp";
 import { capitalizeError } from "../utils/CapitalizeError";
+import { useNavigate } from "react-router-dom";
 
 export default function FormComponent() {
+  const navigate = useNavigate();
   const schoolState = useSelector((state) => state.getSchool);
   const { theme } = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -112,6 +114,7 @@ export default function FormComponent() {
       setValue("ifTeacher", true);
     }
     dispatch(registerAction(data));
+    navigate("/login");
   };
   useEffect(() => {
     getMembers().then((data) => {

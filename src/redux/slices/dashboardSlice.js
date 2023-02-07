@@ -32,13 +32,7 @@ export const postData = createAsyncThunk("dashboard/postData", async (data) => {
       Authorization: header,
     },
     body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .catch((err) => {
-      if (err.response.data === "jwt expired") {
-        localStorage.removeItem("user");
-      }
-    });
+  });
 });
 const dashboardSlice = createSlice({
   name: "dashboardSlice",

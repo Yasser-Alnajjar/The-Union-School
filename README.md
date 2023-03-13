@@ -5,9 +5,10 @@
 ### Thank you all
 
 ## In order to be able to experience the site you must
-### 1 go to folder project
-### 2 open cmd 
-### 3 npm i
+### 1- go to folder project
+### 2- open cmd 
+### 3- npm i
+## and you have to download the database form here -> https://github.com/Yasser-Alnajjar/server-the-union 
 ## Everything on the site will be installed affter thaht
 ## You must have an admin account. If you want to see everything on my site, you can use the accounts below if you want. If you do not want this, you can create a new account.
 ## Admin

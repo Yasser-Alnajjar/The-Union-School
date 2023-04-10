@@ -7,16 +7,16 @@ import Swal from "sweetalert2";
 import { API_URL } from "../api/Api_index";
 import MainTitle from "../components/Main_title";
 import { header, user } from "../helpers/authHelp";
-import { allClassData } from "../redux/slices/dashboardSlice";
+import { allClassData, userClasses } from "../redux/slices/dashboardSlice";
 // ? Dashboard Teachers
 export default function Dashboard() {
-  const { dashboard } = useSelector((state) => state.dashboard);
+  const { dashboard } = useSelector((state) => state);
   const { theme } = useSelector((state) => state);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(allClassData());
+    dispatch(userClasses(user.id));
   }, [dispatch]);
-  console.log(dashboard);
+  console.log(dashboard.userClasses);
   function deleteClass(id) {
     Swal.fire({
       title: "Are you sure?",
@@ -35,7 +35,7 @@ export default function Dashboard() {
             headers: { Authorization: header },
           })
           .then((res) => {
-            dispatch(allClassData());
+            dispatch(userClasses(user.id));
           });
       }
     });
@@ -65,7 +65,7 @@ export default function Dashboard() {
           </tr>
         </thead>
         <tbody>
-          {dashboard.map((item, index) => {
+          {dashboard.userClasses.map((item, index) => {
             return (
               user.id === item.userId && (
                 <tr key={item.id}>

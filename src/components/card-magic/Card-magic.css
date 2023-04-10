@@ -12,38 +12,15 @@
   position: relative;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.2s linear;
+
   font-family: cursive;
 }
 
-.card-magic::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  position: absolute;
-  top: -1%;
-  left: -2%;
-  animation: spin 2.5s linear infinite;
-  z-index: -1;
-}
-.card-magic:hover::before {
-  background-image: linear-gradient(
-    var(--rotate),
-    #95afc0,
-    #4834d4,
-    #c7ecee 43%,
-    #130f40
-  );
+.card-magic:hover {
+  transform: scale(1.05);
 }
 
 .card-magic-bg {
   background-color: rgb(68 95 115 / 80%);
-}
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
 }

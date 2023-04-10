@@ -118,7 +118,7 @@ export default function AddClass() {
                   {...register("gradeTarget")}
                 >
                   <option>Grade Target</option>
-                  <option value="Frist">Frist Grade</option>
+                  <option value="First">First Grade</option>
                   <option value="Second">Second Grade</option>
                   <option value="Third">Third Grade</option>
                 </Form.Select>

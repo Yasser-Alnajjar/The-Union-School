@@ -93,7 +93,7 @@ export default function EditClassSchool() {
     setValue("time", editClassData.time);
     setValue("userId", editClassData.userId);
   }, [editClassData, setValue]);
-
+  console.log(editClassData.userId);
   return (
     <div
       className={`w-100 ${
@@ -144,7 +144,7 @@ export default function EditClassSchool() {
                     {...register("gradeTarget")}
                   >
                     <option>Grade Target</option>
-                    <option value="Frist">Frist Grade</option>
+                    <option value="First">First Grade</option>
                     <option value="Second">Second Grade</option>
                     <option value="Third">Third Grade</option>
                   </Form.Select>

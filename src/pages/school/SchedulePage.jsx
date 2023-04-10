@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import CardMagic from "../../components/card-magic/CardMagic";
 import MainTitle from "../../components/Main_title";
 import TableComponent from "../../components/Table-Component";
 import { user } from "../../helpers/authHelp";
@@ -64,68 +63,56 @@ export default function SchedulePage() {
           {user.ifTeacher && (
             <>
               <Col className="index">
-                <CardMagic>
-                  <TableComponent
-                    grade="Frist"
-                    theme={theme}
-                    currentDay={currentDay}
-                    schedule={schedule}
-                  />
-                </CardMagic>
+                <TableComponent
+                  grade="First"
+                  theme={theme}
+                  currentDay={currentDay}
+                  schedule={schedule}
+                />
               </Col>
               <Col className="index">
-                <CardMagic>
-                  <TableComponent
-                    grade="Second"
-                    theme={theme}
-                    currentDay={currentDay}
-                    schedule={schedule}
-                  />
-                </CardMagic>
+                <TableComponent
+                  grade="Second"
+                  theme={theme}
+                  currentDay={currentDay}
+                  schedule={schedule}
+                />
               </Col>
               <Col className="index">
-                <CardMagic>
-                  <TableComponent
-                    grade="Third"
-                    theme={theme}
-                    currentDay={currentDay}
-                    schedule={schedule}
-                  />
-                </CardMagic>
+                <TableComponent
+                  grade="Third"
+                  theme={theme}
+                  currentDay={currentDay}
+                  schedule={schedule}
+                />
               </Col>
             </>
           )}
           {user.admin && (
             <>
               <Col className="index">
-                <CardMagic>
-                  <TableComponent
-                    grade="Frist"
-                    theme={theme}
-                    currentDay={currentDay}
-                    schedule={schedule}
-                  />
-                </CardMagic>
+                <TableComponent
+                  grade="First"
+                  theme={theme}
+                  currentDay={currentDay}
+                  schedule={schedule}
+                />
               </Col>
               <Col className="index">
-                <CardMagic>
-                  <TableComponent
-                    grade="Second"
-                    theme={theme}
-                    currentDay={currentDay}
-                    schedule={schedule}
-                  />
-                </CardMagic>
+                <TableComponent
+                  grade="Second"
+                  theme={theme}
+                  currentDay={currentDay}
+                  schedule={schedule}
+                />
               </Col>
               <Col className="index">
-                <CardMagic>
-                  <TableComponent
-                    grade="Third"
-                    theme={theme}
-                    currentDay={currentDay}
-                    schedule={schedule}
-                  />
-                </CardMagic>
+                <TableComponent
+                  grade="Third"
+                  theme={theme}
+                  currentDay={currentDay}
+                  schedule={schedule}
+                />
               </Col>
             </>
           )}

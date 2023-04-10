@@ -23,6 +23,26 @@ export const allClassData = createAsyncThunk(
     }
   }
 );
+export const userClasses = createAsyncThunk(
+  "dashboard/userClasses",
+  async (id) => {
+    try {
+      const res = await fetch(`${API_URL}/classes?userId=${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: header,
+        },
+      });
+      const data = res.json();
+      return data;
+    } catch (err) {
+      if (err.response.data === "jwt expired") {
+        localStorage.removeItem("user");
+      }
+    }
+  }
+);
 
 export const postData = createAsyncThunk("dashboard/postData", async (data) => {
   fetch(`${API_URL}/classes`, {
@@ -39,6 +59,7 @@ const dashboardSlice = createSlice({
   initialState: {
     isLoading: false,
     dashboard: [],
+    userClasses: [],
   },
 
   extraReducers: (builder) => {
@@ -51,6 +72,17 @@ const dashboardSlice = createSlice({
     builder.addCase(allClassData.fulfilled, (state, action) => {
       state.isLoading = false;
       state.dashboard = action.payload;
+      return state;
+    });
+    builder.addCase(userClasses.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(userClasses.rejected, (state) => {
+      toast.error("Error rejected to fetch data");
+    });
+    builder.addCase(userClasses.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.userClasses = action.payload;
       return state;
     });
   },

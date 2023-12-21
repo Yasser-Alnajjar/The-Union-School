@@ -40,6 +40,10 @@ export default function Login() {
   } = useForm({
     resolver: yupResolver(schema),
     mode: "onChange",
+    defaultValues:{
+      email:"admin@mail.com",
+      password:"yasser111"
+    }
   });
   const onSubmit = (data) => {
     if (data.stages) {

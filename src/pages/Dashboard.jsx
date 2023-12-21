@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import { API_URL } from "../api/Api_index";
 import MainTitle from "../components/Main_title";
 import { header, user } from "../helpers/authHelp";
-import { allClassData, userClasses } from "../redux/slices/dashboardSlice";
+import { userClasses } from "../redux/slices/dashboardSlice";
 // ? Dashboard Teachers
 export default function Dashboard() {
   const { dashboard } = useSelector((state) => state);

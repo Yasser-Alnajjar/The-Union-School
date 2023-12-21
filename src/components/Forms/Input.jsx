@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
-import EyeIcon from "@rsuite/icons/legacy/Eye";
-import EyeSlashIcon from "@rsuite/icons/legacy/EyeSlash";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 export default function InputFC({
@@ -34,7 +33,7 @@ export default function InputFC({
             variant="transparent"
             onClick={() => setVisible(!visible)}
           >
-            {visible ? <EyeIcon /> : <EyeSlashIcon />}
+            {visible ? <FaEye /> : <FaEyeSlash />}
           </Button>
         ) : null}
       </FloatingLabel>

@@ -75,7 +75,7 @@ export default function Login() {
       <Container>
         <Row className="justify-content-center">
           <Col md="6" className="index">
-            <div className={`content  shadow-lg ${theme.mode} `}>
+            <div className={`content  shadow-md  ${theme.mode} `}>
               <MainTitle name="Login" styles="fs-2 pb-2 pt-1 mb-2" />
               <Form
                 className="w-100"

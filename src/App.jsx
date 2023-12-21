@@ -2,8 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { store } from "./redux/store";
-import { Provider } from "react-redux";
 import { routes } from "./utils/routes";
 const router = createBrowserRouter(routes);
 export default function App() {
@@ -23,9 +21,7 @@ export default function App() {
         pauseOnHover={true}
         theme={theme.mode}
       />
-      <Provider store={store}>
-        <RouterProvider router={router}></RouterProvider>
-      </Provider>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

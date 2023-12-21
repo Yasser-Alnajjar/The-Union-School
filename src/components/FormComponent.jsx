@@ -8,7 +8,6 @@ import {
   Row,
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer } from "react-toastify";
 import { fetchSchool } from "../redux/slices/schoolSlice";
 import InputFC from "./Forms/Input";
 import { useForm } from "react-hook-form";

@@ -127,18 +127,6 @@ export default function FormComponent() {
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
       <Container>
-        <ToastContainer
-          position="top-right"
-          autoClose={2500}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick={true}
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover={true}
-          theme={theme.mode}
-        />
         <Row className="justify-content-center mb-3 text-center">
           <Col md={currentUser === "Student" ? 6 : 8}>
             <FloatingLabel controlId="floatingTextarea10" label="Accessibility">

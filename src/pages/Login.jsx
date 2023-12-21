@@ -40,10 +40,10 @@ export default function Login() {
   } = useForm({
     resolver: yupResolver(schema),
     mode: "onChange",
-    defaultValues:{
-      email:"admin@mail.com",
-      password:"yasser111"
-    }
+    defaultValues: {
+      email: "admin@mail.com",
+      password: "yasser111",
+    },
   });
   const onSubmit = (data) => {
     if (data.stages) {
@@ -51,7 +51,11 @@ export default function Login() {
     } else if (data.language) {
       setValue("ifTeacher", true);
     }
-    dispatch(loginAction(data));
+    dispatch(loginAction(data))
+      .unwrap()
+      .then((data) => {
+        toast.success("Login Successfully");
+      });
   };
 
   return (

@@ -1,1 +1,1 @@
-export const API_URL = "https://union-school.onrender.com";
+export const API_URL = "https://server-the-union.vercel.app";
